@@ -1,0 +1,100 @@
+@startuml
+
+title __USERSSERVICES's Class Diagram__\n
+
+  namespace com.SWEII {
+    namespace Services.UsersServices {
+      class com.AdministratorServices {
+          + listAllAdministrators()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Services.UsersServices {
+      interface com.IAdministratorServices {
+          {abstract} + listAllAdministrators()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Services.UsersServices {
+      interface com.INormalUserServices {
+          {abstract} + listAllNormalUsers()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Services.UsersServices {
+      interface com.IStoreOwnerServices {
+          {abstract} + listAllStoreOwners()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Services.UsersServices {
+      interface com.IUserServices {
+          {abstract} + findByEmail()
+          {abstract} + findByUsername()
+          {abstract} + listAllUsers()
+          {abstract} + saveUser()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Services.UsersServices {
+      class com.NormalUserServices {
+          + listAllNormalUsers()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Services.UsersServices {
+      class com.StoreOwnerServices {
+          + listAllStoreOwners()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Services.UsersServices {
+      class com.UserServices {
+          + findByEmail()
+          + findByUsername()
+          + listAllUsers()
+          + saveUser()
+      }
+    }
+  }
+  
+
+  com.AdministratorServices .up.|> com.IAdministratorServices
+  com.AdministratorServices o-- com.IAdministratorRepository : administratorRepository
+  com.NormalUserServices .up.|> com.INormalUserServices
+  com.NormalUserServices o-- com.INormalUserRepository : normalUserRepository
+  com.StoreOwnerServices .up.|> com.IStoreOwnerServices
+  com.StoreOwnerServices o-- com.IStoreOwnerRepository : storeOwnerRepository
+  com.UserServices .up.|> com.IUserServices
+  com.UserServices o-- com.IAdministratorServices : administratorServices
+  com.UserServices o-- com.INormalUserServices : normalUserServices
+  com.UserServices o-- com.IStoreOwnerServices : storeOwnerServices
+  com.UserServices o-- com.IUserRepository : userRepository
+
+
+right footer
+
+endfooter
+
+@enduml

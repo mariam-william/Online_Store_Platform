@@ -1,0 +1,18 @@
+@startuml
+
+title __SWEII's Class Diagram__\n
+
+  namespace com.SWEII {
+    class com.MainController {
+        {static} + main()
+    }
+  }
+  
+
+
+
+right footer
+
+endfooter
+
+@enduml

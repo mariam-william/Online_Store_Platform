@@ -1,0 +1,48 @@
+@startuml
+
+title __USERSREPOSITORIES's Class Diagram__\n
+
+  namespace com.SWEII {
+    namespace Repositories.UsersRepositories {
+      interface com.IAdministratorRepository {
+          {abstract} + findAllAdministrators()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Repositories.UsersRepositories {
+      interface com.INormalUserRepository {
+          {abstract} + findAllNormalUsers()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Repositories.UsersRepositories {
+      interface com.IStoreOwnerRepository {
+          {abstract} + findAllStoreOwners()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Repositories.UsersRepositories {
+      interface com.IUserRepository {
+          {abstract} + findByEmail()
+          {abstract} + findByUsername()
+      }
+    }
+  }
+  
+
+
+
+right footer
+
+endfooter
+
+@enduml

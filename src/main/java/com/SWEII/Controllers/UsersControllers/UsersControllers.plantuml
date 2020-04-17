@@ -1,0 +1,48 @@
+@startuml
+
+title __USERSCONTROLLERS's Class Diagram__\n
+
+  namespace com.SWEII {
+    namespace Controllers.UsersControllers {
+      class com.AdminApiController {
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Controllers.UsersControllers {
+      class com.NormalUserApiController {
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Controllers.UsersControllers {
+      class com.StoreOwnerApiController {
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Controllers.UsersControllers {
+      class com.UserApiController {
+          + getErrorMessage()
+          + listAllUsers()
+          + userRegister()
+      }
+    }
+  }
+  
+
+  com.UserApiController o-- com.IUserServices : iUserServices
+  com.UserApiController o-- com.UserValidator : userValidator
+
+
+right footer
+
+endfooter
+
+@enduml

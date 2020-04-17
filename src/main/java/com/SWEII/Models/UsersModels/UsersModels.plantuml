@@ -1,0 +1,80 @@
+@startuml
+
+title __USERSMODELS's Class Diagram__\n
+
+  namespace com.SWEII {
+    namespace Models.UsersModels {
+      class com.Administrator {
+          + Administrator()
+          + Administrator()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Models.UsersModels {
+      class com.NormalUser {
+          - address : String
+          - phoneNumber : String
+          + NormalUser()
+          + NormalUser()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Models.UsersModels {
+      class com.StoreOwner {
+          + StoreOwner()
+          + StoreOwner()
+      }
+    }
+  }
+  
+
+  namespace com.SWEII {
+    namespace Models.UsersModels {
+      class com.User {
+          - Id : long
+          - confirmPassword : String
+          - email : String
+          - firstName : String
+          - lastName : String
+          - password : String
+          - type : String
+          - username : String
+          + User()
+          + User()
+          + getConfirmPassword()
+          + getEmail()
+          + getFirstName()
+          + getId()
+          + getLastName()
+          + getPassword()
+          + getType()
+          + getUsername()
+          + setConfirmPassword()
+          + setEmail()
+          + setFirstName()
+          + setId()
+          + setLastName()
+          + setPassword()
+          + setType()
+          + setUsername()
+      }
+    }
+  }
+  
+
+  com.Administrator -up-|> com.User
+  com.NormalUser -up-|> com.User
+  com.StoreOwner -up-|> com.User
+
+
+right footer
+
+endfooter
+
+@enduml
