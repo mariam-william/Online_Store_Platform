@@ -3,6 +3,9 @@
 ## Overview
   This is an Online Store Platform providing various web services. 
 
+## Docker Image
+* **Docker Image**  - [Through this Link]()
+
 #### Release History
   * March 2020: V1
   
@@ -25,10 +28,12 @@ In this project we will focus on building a reliable API for our store.
   
 ## Project Document
   ![SDS Document ]()
+
 ## Project Diagrams
 
 ![register sequence diagram]()
 ![ListAllUsers sequence diagram]()
+
 ## Authors
 * **Mariam Makram**  - [mariammakram](https://github.com/mariammakram)
 * **Yasser Ashraf**  - [YasserAshraf12](https://github.com/YasserAshraf12)
@@ -38,6 +43,7 @@ In this project we will focus on building a reliable API for our store.
 
 ## Github
 * **Github Repository**  - [Repository Link]()
+
 ## How to use?
 
 ### Utility Packages and Classes
