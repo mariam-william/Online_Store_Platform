@@ -4,7 +4,7 @@ title __USERSSERVICES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Services.UsersServices {
-      class com.AdministratorServices {
+      class com.SWEII.Services.UsersServices.AdministratorServices {
           + listAllAdministrators()
       }
     }
@@ -13,7 +13,7 @@ title __USERSSERVICES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Services.UsersServices {
-      interface com.IAdministratorServices {
+      interface com.SWEII.Services.UsersServices.IAdministratorServices {
           {abstract} + listAllAdministrators()
       }
     }
@@ -22,7 +22,7 @@ title __USERSSERVICES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Services.UsersServices {
-      interface com.INormalUserServices {
+      interface com.SWEII.Services.UsersServices.INormalUserServices {
           {abstract} + listAllNormalUsers()
       }
     }
@@ -31,7 +31,7 @@ title __USERSSERVICES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Services.UsersServices {
-      interface com.IStoreOwnerServices {
+      interface com.SWEII.Services.UsersServices.IStoreOwnerServices {
           {abstract} + listAllStoreOwners()
       }
     }
@@ -40,7 +40,7 @@ title __USERSSERVICES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Services.UsersServices {
-      interface com.IUserServices {
+      interface com.SWEII.Services.UsersServices.IUserServices {
           {abstract} + findByEmail()
           {abstract} + findByUsername()
           {abstract} + listAllUsers()
@@ -52,7 +52,7 @@ title __USERSSERVICES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Services.UsersServices {
-      class com.NormalUserServices {
+      class com.SWEII.Services.UsersServices.NormalUserServices {
           + listAllNormalUsers()
       }
     }
@@ -61,7 +61,7 @@ title __USERSSERVICES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Services.UsersServices {
-      class com.StoreOwnerServices {
+      class com.SWEII.Services.UsersServices.StoreOwnerServices {
           + listAllStoreOwners()
       }
     }
@@ -70,7 +70,7 @@ title __USERSSERVICES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Services.UsersServices {
-      class com.UserServices {
+      class com.SWEII.Services.UsersServices.UserServices {
           + findByEmail()
           + findByUsername()
           + listAllUsers()
@@ -80,20 +80,21 @@ title __USERSSERVICES's Class Diagram__\n
   }
   
 
-  com.AdministratorServices .up.|> com.IAdministratorServices
-  com.AdministratorServices o-- com.IAdministratorRepository : administratorRepository
-  com.NormalUserServices .up.|> com.INormalUserServices
-  com.NormalUserServices o-- com.INormalUserRepository : normalUserRepository
-  com.StoreOwnerServices .up.|> com.IStoreOwnerServices
-  com.StoreOwnerServices o-- com.IStoreOwnerRepository : storeOwnerRepository
-  com.UserServices .up.|> com.IUserServices
-  com.UserServices o-- com.IAdministratorServices : administratorServices
-  com.UserServices o-- com.INormalUserServices : normalUserServices
-  com.UserServices o-- com.IStoreOwnerServices : storeOwnerServices
-  com.UserServices o-- com.IUserRepository : userRepository
+  com.SWEII.Services.UsersServices.AdministratorServices .up.|> com.SWEII.Services.UsersServices.IAdministratorServices
+  com.SWEII.Services.UsersServices.AdministratorServices o-- com.SWEII.Repositories.UsersRepositories.IAdministratorRepository : administratorRepository
+  com.SWEII.Services.UsersServices.NormalUserServices .up.|> com.SWEII.Services.UsersServices.INormalUserServices
+  com.SWEII.Services.UsersServices.NormalUserServices o-- com.SWEII.Repositories.UsersRepositories.INormalUserRepository : normalUserRepository
+  com.SWEII.Services.UsersServices.StoreOwnerServices .up.|> com.SWEII.Services.UsersServices.IStoreOwnerServices
+  com.SWEII.Services.UsersServices.StoreOwnerServices o-- com.SWEII.Repositories.UsersRepositories.IStoreOwnerRepository : storeOwnerRepository
+  com.SWEII.Services.UsersServices.UserServices .up.|> com.SWEII.Services.UsersServices.IUserServices
+  com.SWEII.Services.UsersServices.UserServices o-- com.SWEII.Services.UsersServices.IAdministratorServices : administratorServices
+  com.SWEII.Services.UsersServices.UserServices o-- com.SWEII.Services.UsersServices.INormalUserServices : normalUserServices
+  com.SWEII.Services.UsersServices.UserServices o-- com.SWEII.Services.UsersServices.IStoreOwnerServices : storeOwnerServices
+  com.SWEII.Services.UsersServices.UserServices o-- com.SWEII.Repositories.UsersRepositories.IUserRepository : userRepository
 
 
 right footer
+
 
 endfooter
 

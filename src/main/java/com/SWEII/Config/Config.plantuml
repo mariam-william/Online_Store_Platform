@@ -1,0 +1,24 @@
+@startuml
+
+title __CONFIG's Class Diagram__\n
+
+  namespace com.SWEII {
+    namespace Config {
+      class com.SWEII.Config.SecuirtyConfiguration {
+          ~ userDetailsService : UserDetailsService
+          + getPasswordEncoder()
+          # configure()
+          # configure()
+      }
+    }
+  }
+  
+
+  com.SWEII.Config.SecuirtyConfiguration -up-|> org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
+
+
+right footer
+
+endfooter
+
+@enduml

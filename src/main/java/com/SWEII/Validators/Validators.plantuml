@@ -4,7 +4,7 @@ title __VALIDATORS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Validators {
-      class com.UserValidator {
+      class com.SWEII.Validators.UserValidator {
           + supports()
           + validate()
       }
@@ -12,8 +12,8 @@ title __VALIDATORS's Class Diagram__\n
   }
   
 
-  com.UserValidator .up.|> org.springframework.validation.Validator
-  com.UserValidator o-- com.IUserServices : userService
+  com.SWEII.Validators.UserValidator .up.|> org.springframework.validation.Validator
+  com.SWEII.Validators.UserValidator o-- com.SWEII.Services.UsersServices.IUserServices : userService
 
 
 right footer

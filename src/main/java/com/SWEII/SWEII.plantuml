@@ -3,7 +3,7 @@
 title __SWEII's Class Diagram__\n
 
   namespace com.SWEII {
-    class com.MainController {
+    class com.SWEII.MainController {
         {static} + main()
     }
   }
@@ -12,6 +12,7 @@ title __SWEII's Class Diagram__\n
 
 
 right footer
+
 
 endfooter
 

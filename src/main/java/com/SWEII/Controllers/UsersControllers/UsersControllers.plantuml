@@ -4,7 +4,7 @@ title __USERSCONTROLLERS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Controllers.UsersControllers {
-      class com.AdminApiController {
+      class com.SWEII.Controllers.UsersControllers.AdminApiController {
       }
     }
   }
@@ -12,7 +12,7 @@ title __USERSCONTROLLERS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Controllers.UsersControllers {
-      class com.NormalUserApiController {
+      class com.SWEII.Controllers.UsersControllers.NormalUserApiController {
       }
     }
   }
@@ -20,7 +20,7 @@ title __USERSCONTROLLERS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Controllers.UsersControllers {
-      class com.StoreOwnerApiController {
+      class com.SWEII.Controllers.UsersControllers.StoreOwnerApiController {
       }
     }
   }
@@ -28,17 +28,19 @@ title __USERSCONTROLLERS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Controllers.UsersControllers {
-      class com.UserApiController {
+      class com.SWEII.Controllers.UsersControllers.UserApiController {
           + getErrorMessage()
+          + home()
           + listAllUsers()
+          + sign_in()
           + userRegister()
       }
     }
   }
   
 
-  com.UserApiController o-- com.IUserServices : iUserServices
-  com.UserApiController o-- com.UserValidator : userValidator
+  com.SWEII.Controllers.UsersControllers.UserApiController o-- com.SWEII.Services.UsersServices.IUserServices : iUserServices
+  com.SWEII.Controllers.UsersControllers.UserApiController o-- com.SWEII.Validators.UserValidator : userValidator
 
 
 right footer

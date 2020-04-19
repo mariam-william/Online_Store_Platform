@@ -16,6 +16,7 @@
     </parent>
 
 
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -71,6 +72,19 @@
             <version>${mysql.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20190722</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -80,6 +94,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <addResources>true</addResources>
+                    <finalName>OnlineStorePlatform</finalName>
                 </configuration>
             </plugin>
 
@@ -88,7 +103,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>OnlineStorePlatform</finalName>
     </build>
-
 
 </project>

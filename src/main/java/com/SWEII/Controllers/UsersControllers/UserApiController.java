@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@RequestMapping("/home/user")
 @RestController
 public class UserApiController {
 
@@ -23,7 +24,12 @@ public class UserApiController {
     @Autowired(required = true)
     UserValidator userValidator;
 
-    @PostMapping("/register")
+    @GetMapping("/")
+    public String home(){
+        return "Welcome";
+    }
+
+    @GetMapping("/register")
     public String userRegister(@RequestBody User user, BindingResult bindingResult,
                                @RequestParam(required = false) String address,
                                @RequestParam(required = false) String phoneNumber,
@@ -70,30 +76,30 @@ public class UserApiController {
         }
     }
 
-    @PostMapping("/listAllUsers")
-    public List<User> listAllUsers(@RequestParam("uname") String username){
-        User userCheck = iUserServices.findByUsername(username);
-        if(userCheck != null && userCheck.getType().equals("Admin")) {
-            List<User> users = new ArrayList<>();
-            users = iUserServices.listAllUsers();
-            return users;
-        }
-
-        return null;
+    @GetMapping("/listAllUsers")
+    public List<User> listAllUsers(){
+        List<User> users = new ArrayList<>();
+        users = iUserServices.listAllUsers();
+        return users;
     }
+
 
     @GetMapping("/signIn")
     public String sign_in(@RequestParam("handle") String handle ,
-                           @RequestParam("password")String password){
+                          @RequestParam("password")String password){
         User userCheck;
         if(handle.contains("@"))
             userCheck = iUserServices.findByEmail(handle);
         else
             userCheck = iUserServices.findByUsername(handle);
-        if(userCheck != null)
-            if(userCheck.getPassword().equals(password))
+        if(userCheck != null){
+            if(userCheck.getPassword().equals(password)) {
                 return "Logged In Successfully";
-        return "Failed!";
+            }
+            else
+                return "Incorrect Username Or Password";
+        }
+        return "Sorry, you are not a registered user! Please sign up first.";
     }
 
     //TO Return Error Message

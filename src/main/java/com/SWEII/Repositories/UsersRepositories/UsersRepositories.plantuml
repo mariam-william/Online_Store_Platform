@@ -4,7 +4,7 @@ title __USERSREPOSITORIES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Repositories.UsersRepositories {
-      interface com.IAdministratorRepository {
+      interface com.SWEII.Repositories.UsersRepositories.IAdministratorRepository {
           {abstract} + findAllAdministrators()
       }
     }
@@ -13,7 +13,7 @@ title __USERSREPOSITORIES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Repositories.UsersRepositories {
-      interface com.INormalUserRepository {
+      interface com.SWEII.Repositories.UsersRepositories.INormalUserRepository {
           {abstract} + findAllNormalUsers()
       }
     }
@@ -22,7 +22,7 @@ title __USERSREPOSITORIES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Repositories.UsersRepositories {
-      interface com.IStoreOwnerRepository {
+      interface com.SWEII.Repositories.UsersRepositories.IStoreOwnerRepository {
           {abstract} + findAllStoreOwners()
       }
     }
@@ -31,7 +31,7 @@ title __USERSREPOSITORIES's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Repositories.UsersRepositories {
-      interface com.IUserRepository {
+      interface com.SWEII.Repositories.UsersRepositories.IUserRepository {
           {abstract} + findByEmail()
           {abstract} + findByUsername()
       }
@@ -42,6 +42,7 @@ title __USERSREPOSITORIES's Class Diagram__\n
 
 
 right footer
+
 
 endfooter
 

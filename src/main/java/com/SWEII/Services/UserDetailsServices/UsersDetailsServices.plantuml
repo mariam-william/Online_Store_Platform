@@ -1,0 +1,23 @@
+@startuml
+
+title __USERSDETAILSSERVICES's Class Diagram__\n
+
+  namespace com.SWEII {
+    namespace Services.UsersDetailsServices {
+      class com.SWEII.Services.UsersDetailsServices.UserDetailsServices {
+          + loadUserByUsername()
+      }
+    }
+  }
+  
+
+  com.SWEII.Services.UsersDetailsServices.UserDetailsServices .up.|> org.springframework.security.core.userdetails.UserDetailsService
+  com.SWEII.Services.UsersDetailsServices.UserDetailsServices o-- com.SWEII.Repositories.UsersRepositories.IUserRepository : userRepository
+
+
+right footer
+
+
+endfooter
+
+@enduml

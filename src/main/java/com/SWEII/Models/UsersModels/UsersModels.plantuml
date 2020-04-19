@@ -4,7 +4,7 @@ title __USERSMODELS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Models.UsersModels {
-      class com.Administrator {
+      class com.SWEII.Models.UsersModels.Administrator {
           + Administrator()
           + Administrator()
       }
@@ -14,11 +14,15 @@ title __USERSMODELS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Models.UsersModels {
-      class com.NormalUser {
+      class com.SWEII.Models.UsersModels.NormalUser {
           - address : String
           - phoneNumber : String
           + NormalUser()
           + NormalUser()
+          + getAddress()
+          + getPhoneNumber()
+          + setAddress()
+          + setPhoneNumber()
       }
     }
   }
@@ -26,7 +30,7 @@ title __USERSMODELS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Models.UsersModels {
-      class com.StoreOwner {
+      class com.SWEII.Models.UsersModels.StoreOwner {
           + StoreOwner()
           + StoreOwner()
       }
@@ -36,7 +40,7 @@ title __USERSMODELS's Class Diagram__\n
 
   namespace com.SWEII {
     namespace Models.UsersModels {
-      class com.User {
+      class com.SWEII.Models.UsersModels.User {
           - Id : long
           - confirmPassword : String
           - email : String
@@ -68,9 +72,9 @@ title __USERSMODELS's Class Diagram__\n
   }
   
 
-  com.Administrator -up-|> com.User
-  com.NormalUser -up-|> com.User
-  com.StoreOwner -up-|> com.User
+  com.SWEII.Models.UsersModels.Administrator -up-|> com.SWEII.Models.UsersModels.User
+  com.SWEII.Models.UsersModels.NormalUser -up-|> com.SWEII.Models.UsersModels.User
+  com.SWEII.Models.UsersModels.StoreOwner -up-|> com.SWEII.Models.UsersModels.User
 
 
 right footer
