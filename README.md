@@ -32,7 +32,7 @@ In this project we will focus on building a reliable API for our store.
 ## Project Diagrams
 *  **Class Diagram**
 ![Class diagram](https://github.com/mariammakram/Online_Store_Platform/blob/master/Class%20Diagram.png)
-*  *User Register Sequence Diagram**
+*  **User Register Sequence Diagram**
 ![register sequence diagram](https://github.com/mariammakram/Online_Store_Platform/blob/master/Sequence%20Diagram/UserRegisterSequenceDiagram.png)
 *  **List All Users Sequence Diagram**
 ![ListAllUsers sequence diagram](https://github.com/mariammakram/Online_Store_Platform/blob/master/Sequence%20Diagram/ListAllUsers.PNG)
