@@ -33,9 +33,10 @@ In this project we will focus on building a reliable API for our store.
 
 ![register sequence diagram]()
 ![ListAllUsers sequence diagram]()
+![signIn sequence diagram]()
 
 ## Authors
-* **Mariam Makram**  - [mariammakram](https://github.com/mariammakram)
+* **Marriam Makram**  - [mariammakram](https://github.com/mariammakram)
 * **Yasser Ashraf**  - [YasserAshraf12](https://github.com/YasserAshraf12)
 * **Lauren Safwat**  - [lauren-safwat](https://github.com/lauren-safwat)
 * **Leenah Essam**  - [Leenahessam](https://github.com/Leenahessam)
